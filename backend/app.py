@@ -76,6 +76,7 @@ def generate_pdf(name, gender, sr_no, template_name):
     return output_stream
 
 @app.route('/_/backend/templates', methods=['GET'])
+@app.route('/templates', methods=['GET'])
 def list_templates():
     if not os.path.exists(TEMPLATES_DIR):
         return jsonify([])
@@ -83,6 +84,7 @@ def list_templates():
     return jsonify(files)
 
 @app.route('/_/backend/generate', methods=['POST'])
+@app.route('/generate', methods=['POST'])
 def generate():
     data = request.json
     name = data.get('name', 'Participant')
