@@ -3,7 +3,7 @@
 A high-performance, professional certificate generation suite designed for GeM (Government e-Marketplace) training programs. Built with a modern tech stack for seamless automated workflows and premium PDF output.
 
 ## 🚀 Deployment Status
-[![Deployed to Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://bid-gem.vercel.app)
+[![Deployed to Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://gem-certification.vercel.app)
 
 ## ✨ Core Features
 - **Smart Prefixing**: Automatic gender detection (Mr./Ms.) based on input data.
