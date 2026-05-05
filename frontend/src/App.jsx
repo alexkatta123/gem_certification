@@ -26,7 +26,7 @@ function App() {
   React.useEffect(() => {
     const fetchTemplates = async () => {
       try {
-        const response = await axios.get('/api/templates');
+        const response = await axios.get('/_/backend/templates');
         setTemplates(response.data);
         if (response.data.length > 0) {
           setFormData(prev => ({ ...prev, template: response.data[0] }));
@@ -71,7 +71,7 @@ function App() {
 
     if (mode === 'single') {
       try {
-        const response = await axios.post('/api/generate', formData, {
+        const response = await axios.post('/_/backend/generate', formData, {
           responseType: 'blob'
         });
 
@@ -130,7 +130,7 @@ function App() {
             };
 
             try {
-              const response = await axios.post('/api/generate', payload, {
+              const response = await axios.post('/_/backend/generate', payload, {
                 responseType: 'blob',
                 timeout: 30000 // 30s timeout per certificate
               });
@@ -171,7 +171,7 @@ function App() {
               template: formData.template
             };
 
-            const response = await axios.post('/api/generate', payload, {
+            const response = await axios.post('/_/backend/generate', payload, {
               responseType: 'blob'
             });
             
