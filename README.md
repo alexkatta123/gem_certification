@@ -1,33 +1,40 @@
-# GeM Certificate Generator
-**By Bhargav Ram Potluri**
+# 💎 GeM Certificate Generator (Enterprise Edition)
 
-A premium web-based tool for generating GeM Training Certificates with automated gender-based prefixes and professional PDF rendering.
+A high-performance, professional certificate generation suite designed for GeM (Government e-Marketplace) training programs. Built with a modern tech stack for seamless automated workflows and premium PDF output.
 
-## Quick Start
+## 🚀 Deployment Status
+[![Deployed to Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://bid-gem.vercel.app)
 
-### 1. Setup Backend (Python)
-Ensure you have Python installed.
+## ✨ Core Features
+- **Smart Prefixing**: Automatic gender detection (Mr./Ms.) based on input data.
+- **Bulk Processing**: Generate hundreds of certificates simultaneously from an Excel file.
+- **Direct Save**: Support for the File System Access API to save certificates directly to a local folder.
+- **Enterprise Aesthetics**: Sleek dark-mode UI with glassmorphism and smooth Framer Motion animations.
+- **High Fidelity**: Professional typography using Alegreya SC and Aleo fonts.
+
+## 🛠️ Tech Stack
+- **Frontend**: React 19, Vite, Framer Motion, Lucide React.
+- **Backend**: Python (Flask), PyPDF2, ReportLab.
+- **Deployment**: Vercel (Serverless Functions).
+
+## 📦 Installation & Local Development
+
+### 1. Backend Setup
 ```bash
 cd backend
 pip install -r requirements.txt
 python app.py
 ```
 
-### 2. Setup Frontend (Node.js)
-Ensure you have Node.js installed.
+### 2. Frontend Setup
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
 
-## Features
-- **Multi-Template Support**: Choose between "Direct Purchase", "Intro", and "Tender" training templates.
-- **Smart Prefix**: Automatically detects gender (M -> Mr., F -> Ms.) for name formatting.
-- **Premium UI**: Sleek, glassmorphic design with dark mode aesthetics.
-- **High Fidelity**: Uses high-quality fonts (Alegreya SC & Aleo) for professional-grade certificates.
-- **Real-time Generation**: Instant PDF generation and download.
+## 🌐 Vercel Deployment Config
+The project is pre-configured with `vercel.json` to handle the dual-stack architecture (Node.js + Python). The API is routed through the `/api` prefix.
 
-## Vercel Deployment Note
-If you are deploying to Vercel, ensure that the `backend/templates` and `backend/*.ttf` files are included in your project structure. The backend is designed to look for templates in the `templates/` subdirectory relative to `app.py`.
-
+---
+**Developed by Bhargav Ram Potluri**

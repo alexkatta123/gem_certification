@@ -10,17 +10,17 @@ import io
 app = Flask(__name__)
 CORS(app)
 
-# Register fonts
-# Ensure fonts are in the same directory as app.py
-FONT_BOLD = 'AlegreyaSC-Bold.ttf'
-FONT_REGULAR = 'Aleo-Regular.ttf'
+# Use absolute paths for Vercel compatibility
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FONT_BOLD = os.path.join(BASE_DIR, 'AlegreyaSC-Bold.ttf')
+FONT_REGULAR = os.path.join(BASE_DIR, 'Aleo-Regular.ttf')
 
 if os.path.exists(FONT_BOLD):
     pdfmetrics.registerFont(TTFont('AlegreyaSC-Bold', FONT_BOLD))
 if os.path.exists(FONT_REGULAR):
     pdfmetrics.registerFont(TTFont('Aleo-Regular', FONT_REGULAR))
 
-TEMPLATES_DIR = 'templates'
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 def generate_pdf(name, gender, sr_no, template_name):
     # Gender prefix logic
